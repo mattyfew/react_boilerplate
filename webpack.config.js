@@ -6,13 +6,13 @@ module.exports = {
         filename: 'bundle.js',
         path: path.join(__dirname, 'public')
     },
+    resolve: {
+        extensions: ['*', '.js', '.jsx']
+    },
     module: {
         rules: [
             {
-                loader: 'babel-loader',
-                query: {
-                    presets: ['react', 'es2015']
-                }
+                loader: 'babel-loader'
             }
         ]
     }
